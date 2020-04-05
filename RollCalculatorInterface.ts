@@ -1,5 +1,8 @@
+import RollReportInterface from './RollReportInterface';
+import RollResultInterface from './RollResultInterface';
+
 interface RollCalculatorInterface {
-  calculateRoll(rollData: JSON): JSON;
+  calculateRoll(report: RollReportInterface): RollResultInterface;
 }
 
 export default RollCalculatorInterface;
