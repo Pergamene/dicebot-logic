@@ -1,5 +1,6 @@
 import DiceParcerInterface from './DiceParserInterface';
 import RollCalculatorInterface from './RollCalculatorInterface';
+import RollResultInterface from './RollResultInterface';
 
 import DiceParser from './DiceParser';
 import RollCalculator from './RollCalculator';
@@ -13,7 +14,7 @@ class DiceBot {
     this.calculator = RollCalculator;
   }
 
-  rollDice(roll: string): JSON {
+  rollDice(roll: string): RollResultInterface {
     const report = this.parser.parseRoll(roll);
     const result = this.calculator.calculateRoll(report);
     return result;
